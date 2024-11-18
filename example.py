@@ -52,10 +52,10 @@ def load_generated_answers(file_path):
         return [line.strip() for line in f if line.strip()]  # 去除空行
 
 # 加载 LLaMA 模型和分词器
-print("Loading LLaMA 2 70B model...")
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-70b-chat-hf")
+print("Loading LLaMA 2 7B model...")
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 model = AutoModelForCausalLM.from_pretrained(
-    "meta-llama/Llama-2-70b-chat-hf",
+    "meta-llama/Llama-2-7b-chat-hf",
     device_map="auto",  # 自动分配到多个 GPU
     torch_dtype=torch.float16  # 使用 float16 减少显存占用
 )
